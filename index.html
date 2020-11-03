@@ -1,11 +1,39 @@
 <html>
 
 <head>
-    <title>Index</title>
+    <title>Inicio</title>
+    <script src="JS\Main.js"></script>
+    <link rel="stylesheet" href="CSS\General.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
-<body>
-    Punto de Venta
+<body onload="loadList()">
+    <header>
+        <div>
+            <span class="btn" onclick="moveTo('index.html')">
+                <span class="material-icons">view_module</span>
+            <p>Catálogo</p>
+            </span>
+            <span class="btn" onclick="moveTo('carrito.html')">
+                <span class="material-icons">shopping_cart</span>
+            <p>Carrito</p>
+            </span>
+        </div>
+    </header>
+    <div class="space"></div>
+    <div id="secc1">
+        <div class="article" id="blank">
+            <div class="article-image">
+                <img src="IMG\product.svg" />
+            </div>
+            <div class="article-info">
+                <p class="article-name">Nombre</p>
+                <p class="article-price">$110</p>
+                <p class="article-desc">Hola soy un producto</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,158 @@
+body {
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.space {
+    height: 40px;
+    width: 100%;
+}
+
+header {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+header div {
+    position: absolute;
+    top: 20%;
+    right: 50px;
+    height: 60%;
+    float: right;
+    color: #B238C5;
+    font-size: 20px;
+}
+
+header .btn {
+    display: inline-flex;
+    height: 100%;
+    width: 140px;
+    border-radius: 10px;
+    align-items: center;
+    margin: 0px 10px 0px 0px;
+}
+
+header .btn:hover {
+    color: white;
+    font-size: 22px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: #B238C5;
+}
+
+header .btn span {
+    margin: 0px 10px;
+}
+
+header .btn p {
+    width: 100%;
+    margin-right: 10px;
+    text-align: center;
+}
+
+#secc1 {
+    text-align: center;
+    margin: 0px 25px;
+}
+
+.table {
+    width: 100%;
+    height: auto;
+}
+
+.table-row {
+    border-radius: 10px;
+    width: 100%;
+    height: 75px;
+    background-color: #e4ebff;
+    border-top: 5px solid white;
+}
+
+.table-row:not(.table-head):hover {
+    background-color: #b6caff;
+}
+
+.table-head {
+    border-top: 0px;
+    background-color: #B238C5;
+    color: white;
+    font-size: 20px;
+}
+
+.table-cell {
+    /* Para que se centre verticalmente el contenido */
+    display: inline-flex;
+    align-items: center;
+    /*  */
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.big {
+    width: 50%;
+}
+
+.smol {
+    width: 10%;
+}
+
+.table-cell p {
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+.article {
+    /* Para que se apilen como llegan y quede centrado */
+    display: inline-block;
+    background-color: #e4ebff;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    height: 450px;
+    width: 250px;
+    margin: 15px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.article:hover {
+    background-color: #b6caff;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
+}
+
+.article-image {
+    background-color: #f9f1ff;
+    border-radius: 5px;
+    width: 100%;
+    height: 250px;
+}
+
+.article-image img {
+    margin: 10px;
+    width: 230px;
+}
+
+.article>div>p {
+    margin: 5px 0px 0px 0px;
+    width: 100%;
+    text-align: justify;
+}
+
+.article-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.article-price {
+    border: solid #B238C5;
+    border-width: 0px 0px 2px 0px;
+}
+
+#blank {
+    display: none;
+}
+
+
+/* FUNCIONAL */

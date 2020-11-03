@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>Carrito</title>
+    <script src="JS\Main.js"></script>
+    <link rel="stylesheet" href="CSS\General.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body onload="loadCar()">
+    <header>
+        <div>
+            <span class="btn" onclick="moveTo('index.html')">
+                <span class="material-icons">view_module</span>
+            <p>Catálogo</p>
+            </span>
+            <span class="btn" onclick="moveTo('carrito.html')">
+                <span class="material-icons">shopping_cart</span>
+            <p>Carrito</p>
+            </span>
+        </div>
+    </header>
+    <div class="space"></div>
+    <div id="secc1">
+        <div class="table">
+            <div class="table-row table-head">
+                <div class="table-cell">
+                    <p>Producto</p>
+                </div>
+                <div class="table-cell big">
+                    <p>Descripción</p>
+                </div>
+                <div class="table-cell smol">
+                    <p>Precio</p>
+                </div>
+                <div class="table-cell smol">
+                    <p>Cantidad</p>
+                </div>
+                <div class="table-cell smol">
+                    <p>Total</p>
+                </div>
+            </div>
+            <div class="table-row" id="blank">
+                <div class="table-cell">
+                    <p class="name">Cosa</p>
+                </div>
+                <div class="table-cell big">
+                    <p class="desc">Ta chida</p>
+                </div>
+                <div class="table-cell smol">
+                    <p class="price">Mucho</p>
+                </div>
+                <div class="table-cell smol">
+                    <p class="units">sinko</p>
+                </div>
+                <div class="table-cell smol">
+                    <p class="total-price">5 x Mucho</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
