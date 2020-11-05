@@ -10,7 +10,6 @@ const PROD_INITIAL = [
 var products = loadSessionObject(PROD) == null ? PROD_INITIAL : loadSessionObject(PROD);
 var cart = loadSessionObject(CART) == null ? [] : loadSessionObject(CART);
 
-alert("Casi listo, falta añadir fecha y hora en tiempo real, además de los mensaje en consola");
 
 function moveTo(url) {
     // alert(url)
