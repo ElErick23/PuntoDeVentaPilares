@@ -62,21 +62,32 @@ header .btn p {
 }
 
 .table-row {
+    position: relative;
     border-radius: 10px;
     width: 100%;
     height: 75px;
     background-color: #e4ebff;
     border-top: 5px solid white;
-}
-
-.table-row:not(.table-head):hover {
-    background-color: #b6caff;
+    font-size: 16px;
 }
 
 .table-head {
     border-top: 0px;
     background-color: #B238C5;
     color: white;
+    font-size: 20px;
+}
+
+.table-bottom {
+    width: 10%;
+    float: right;
+    background-color: #7d9efa;
+}
+
+.table-bottom .table-cell {
+    width: 100%;
+    color: white;
+    font-weight: bold;
     font-size: 20px;
 }
 
@@ -104,12 +115,44 @@ header .btn p {
     text-align: center;
 }
 
+.material-icons.btn-cancel {
+    z-index: 10;
+    position: absolute;
+    display: none;
+    user-select: none;
+    left: 10px;
+    top: 15px;
+    color: rgb(216, 36, 36);
+    font-size: 40px;
+}
+
+.table-cell span {
+    display: none;
+    user-select: none;
+    color: #B238C5;
+}
+
+.table-row:hover span {
+    display: block;
+}
+
+.table-row span:hover {
+    cursor: pointer;
+}
+
+.table-row span:active {
+    color: #7d9efa;
+}
+
 .article {
     /* Para que se apilen como llegan y quede centrado */
     display: inline-block;
+    /*  */
+    vertical-align: top;
     background-color: #e4ebff;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    cursor: pointer;
     height: 450px;
     width: 250px;
     margin: 15px;
@@ -118,8 +161,23 @@ header .btn p {
 }
 
 .article:hover {
-    background-color: #b6caff;
+    color: white;
+    background-color: #7d9efa;
     box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.2);
+}
+
+.article.add {
+    background-color: #f9f1ff;
+    color: #B238C5;
+}
+
+.article.add:hover {
+    background-color: #e9cdff;
+}
+
+.article.add .material-icons.btn-add {
+    font-size: 250px;
+    user-select: none;
 }
 
 .article-image {
@@ -127,6 +185,14 @@ header .btn p {
     border-radius: 5px;
     width: 100%;
     height: 250px;
+}
+
+.article.add .article-image {
+    /* Para que se centre verticalmente el contenido */
+    display: inline-flex;
+    align-items: center;
+    /*  */
+    height: 100%;
 }
 
 .article-image img {
@@ -147,6 +213,11 @@ header .btn p {
 
 .article-price {
     border: solid #B238C5;
+    border-width: 0px 0px 2px 0px;
+}
+
+.article:hover .article-price {
+    border: solid #e9cdff;
     border-width: 0px 0px 2px 0px;
 }
 

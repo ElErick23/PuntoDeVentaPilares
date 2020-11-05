@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
-<body onload="loadCar()">
+<body onload="loadCart()">
     <header>
         <div>
             <span class="btn" onclick="moveTo('index.html')">
@@ -42,21 +42,29 @@
                 </div>
             </div>
             <div class="table-row" id="blank">
+                <span class="material-icons btn-cancel">cancel</span>
                 <div class="table-cell">
-                    <p class="name">Cosa</p>
+                    <p class="name"></p>
                 </div>
                 <div class="table-cell big">
-                    <p class="desc">Ta chida</p>
+                    <p class="desc"></p>
                 </div>
                 <div class="table-cell smol">
-                    <p class="price">Mucho</p>
+                    <p class="price"></p>
                 </div>
                 <div class="table-cell smol">
-                    <p class="units">sinko</p>
+                    <span class="material-icons btn-remove">remove_circle</span>
+                    <p class="units"></p>
+                    <span class="material-icons btn-add">add_circle</span>
                 </div>
                 <div class="table-cell smol">
-                    <p class="total-price">5 x Mucho</p>
+                    <p class="total-price"></p>
                 </div>
+            </div>
+        </div>
+        <div class="table-row table-bottom">
+            <div class="table-cell smol">
+                <p id="final-price"></p>
             </div>
         </div>
     </div>
