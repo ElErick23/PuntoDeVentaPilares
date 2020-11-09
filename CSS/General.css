@@ -18,11 +18,24 @@ header {
 header div {
     position: absolute;
     top: 20%;
-    right: 50px;
     height: 60%;
     float: right;
     color: #B238C5;
     font-size: 20px;
+}
+
+header .datetime {
+    left: 50px;
+    display: inline-flex;
+    align-items: center;
+}
+
+#time {
+    margin-left: 20px;
+}
+
+header .btn-container {
+    right: 50px;
 }
 
 header .btn {

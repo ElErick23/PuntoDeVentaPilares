@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
-<body onload="loadList()">
+<body onload="UpdateTime(); loadList()">
     <header>
-        <div>
+        <div class="datetime">
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
+        <div class="btn-container">
             <span class="btn" onclick="moveTo('index.html')">
                 <span class="material-icons">view_module</span>
             <p>Catálogo</p>
@@ -39,7 +43,7 @@
             </div>
         </div>
     </div>
-    <p>Casi listo, falta añadir fecha y hora en tiempo real, además de los mensaje en consola</p>
+    <p>Mensajes en consola al añadir al carrito y cambiar las unidades de un producto</p>
 </body>
 
 </html>

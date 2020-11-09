@@ -1,15 +1,25 @@
 const CART = "cart",
-    PROD = "prod";
-const ERROR_RECHARGE = "Ocurrió un error, recarga la página por favor";
-const PROD_INITIAL = [
-    { name: "Tenis", price: 500, desc: "Deportivos, útiles para correr" },
-    { name: "Smartphone", price: 27000, desc: "Gama alta, lo más nuevo en tecnología" },
-    { name: "Guitarra", price: 3600, desc: "Hermoso sonido y el más fino acabado" }
-];
+    PROD = "prod",
+    DELAY = 1000,
+    ERROR_RECHARGE = "Ocurrió un error, recarga la página por favor",
+    PROD_INITIAL = [
+        { name: "Tenis", price: 500, desc: "Deportivos, útiles para correr" },
+        { name: "Smartphone", price: 27000, desc: "Gama alta, lo más nuevo en tecnología" },
+        { name: "Guitarra", price: 3600, desc: "Hermoso sonido y el más fino acabado" }
+    ];
 
-var products = loadSessionObject(PROD) == null ? PROD_INITIAL : loadSessionObject(PROD);
-var cart = loadSessionObject(CART) == null ? [] : loadSessionObject(CART);
+var products = loadSessionObject(PROD) == null ? PROD_INITIAL : loadSessionObject(PROD),
+    cart = loadSessionObject(CART) == null ? [] : loadSessionObject(CART);
 
+setInterval(UpdateTime, DELAY);
+
+function UpdateTime() {
+    var E_DATE = document.getElementById("date"),
+        E_TIME = document.getElementById("time");
+    var currentdate = new Date();
+    E_DATE.innerHTML = currentdate.toLocaleDateString();
+    E_TIME.innerHTML = currentdate.toLocaleTimeString();
+}
 
 function moveTo(url) {
     // alert(url)
@@ -68,6 +78,7 @@ function addToCart(index) {
             cart.push({ index: index, units: 1 });
             saveSessionObject(CART, cart);
             alert("'" + products[index].name + "' añadido");
+            console.log("Producto '" + products[index].name + "' añadido al carrito");
         }
     else
         alert(ERROR_RECHARGE);
@@ -89,6 +100,7 @@ function editFromCart(cart_index, units) {
         if (units > 0) {
             cart[cart_index].units = units;
             saveSessionObject(CART, cart);
+            console.log("Ahora hay " + units + " unidades de '" + products[cart[cart_index].index].name + "'");
         }
     } else
         alert(ERROR_RECHARGE);

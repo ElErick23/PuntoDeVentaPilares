@@ -8,9 +8,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
-<body onload="loadCart()">
+<body onload="UpdateTime(); loadCart()">
     <header>
-        <div>
+        <div class="datetime">
+            <p id="date"></p>
+            <p id="time"></p>
+        </div>
+        <div class="btn-container">
             <span class="btn" onclick="moveTo('index.html')">
                 <span class="material-icons">view_module</span>
             <p>Catálogo</p>
